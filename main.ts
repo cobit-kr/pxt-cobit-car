@@ -18,6 +18,6 @@ namespace cobit_car {
         basic.pause(10)
         pins.digitalWritePin(DigitalPin.P9, 0 )
         value = pins.pulseIn(DigitalPin.P10, PulseValue.High)  /  58 
-        return value
+        return  value
     }   
 }
