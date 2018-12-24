@@ -9,7 +9,7 @@ namespace cobit_car {
 	 */
     //% weight=90  
     //% blockId="cobit_readUltraSonic" block="초음파센서 읽기"
-    export function readUltraSonic(): number {
+    export function readUltra(): number {
         let value = 0
         pins.digitalWritePin(DigitalPin.P9, 0)
         basic.pause(2)
