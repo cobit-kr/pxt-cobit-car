@@ -1,4 +1,4 @@
-basic.showLeds(`
+basic.showLed(`
     . . . . .
     . # . # .
     . . . . .
