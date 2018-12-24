@@ -4,7 +4,6 @@
  */
 //% color=#f44242 icon="\uf1b9" block="cobit-car"
 namespace cobit_car {
-
     /**
 	 *  Read ultrasonic sensor 
 	 */
@@ -16,7 +15,7 @@ namespace cobit_car {
         basic.pause(2)
         pins.digitalWritePin(DigitalPin.P9, 1)
         basic.pause(10)
-        pins.digitalWritePin(DigitalPin.P9, 0 )
+        pins.digitalWritePin(DigitalPin.P9, 0)
         value = pins.pulseIn(DigitalPin.P10, PulseValue.High)  /  58 
         return  value
     }   
