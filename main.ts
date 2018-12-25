@@ -17,7 +17,6 @@ enum MotorDirection {
  */
 //% color=#f44242 icon="\uf1b9" block="cobit-car"
 namespace cobit_car {
-
     /**
 	 * Run left or right motor to CCW or CW with speed of percent. 
      * @param motor left or right motor 
@@ -160,14 +159,14 @@ namespace cobit_car {
 	 */
     //% weight=90  
     //% blockId="cobit_readUltraSonic" block="초음파센서 읽기"
-    export function readUltraSonic(): number {
+    export function readUltra(): number {
         let value = 0
         pins.digitalWritePin(DigitalPin.P9, 0)
         basic.pause(2)
         pins.digitalWritePin(DigitalPin.P9, 1)
         basic.pause(10)
-        pins.digitalWritePin(DigitalPin.P9, 0 )
+        pins.digitalWritePin(DigitalPin.P9, 0)
         value = pins.pulseIn(DigitalPin.P10, PulseValue.High)  /  58 
-        return value
+        return  value
     }   
 }
