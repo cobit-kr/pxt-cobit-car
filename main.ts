@@ -217,7 +217,7 @@ namespace cobit_car {
             degree = 180
         }
         if (degree < 0) {
-            degree = 0
+            degree = 0   
         }
         pins.servoWritePin(AnalogPin.P3, degree)
     }  
