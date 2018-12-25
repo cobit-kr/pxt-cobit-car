@@ -176,7 +176,7 @@ namespace cobit_car {
 	 */
     //% weight=90
     //% degree.min=0 degree.max=180
-    //% blockId="cobit-base_rotateServo" block="서보모터 1 %degree|도 회전하기"
+    //% blockId="cobit-base_rotateServo1" block="서보모터 1 %degree|도 회전하기"
     export function rotateServo1(degree: number): void {
         if (degree > 180) {
             degree = 180
@@ -193,7 +193,7 @@ namespace cobit_car {
 	 */
     //% weight=90
     //% degree.min=0 degree.max=180
-    //% blockId="cobit-base_rotateServo" block="서보모터 2 %degree|도 회전하기"
+    //% blockId="cobit-base_rotateServo2" block="서보모터 2 %degree|도 회전하기"
     export function rotateServo2(degree: number): void {
         if (degree > 180) {
             degree = 180
@@ -211,7 +211,7 @@ namespace cobit_car {
 	 */
     //% weight=90
     //% degree.min=0 degree.max=180
-    //% blockId="cobit-base_rotateServo" block="서보모터 3 %degree|도 회전하기"
+    //% blockId="cobit-base_rotateServo3" block="서보모터 3 %degree|도 회전하기"
     export function rotateServo3(degree: number): void {
         if (degree > 180) {
             degree = 180
@@ -227,7 +227,7 @@ namespace cobit_car {
 	 *  Read IR sensor 1
 	 */
     //% weight=90
-    //% blockId="cobit-base_readIRsensor" block="IR센서 1 읽기"
+    //% blockId="cobit-base_readIRsensor1" block="IR센서 1 읽기"
     export function readIRsensor1(): number {
         let value = 0
         value = pins.digitalReadPin(DigitalPin.P8)
@@ -238,7 +238,7 @@ namespace cobit_car {
 	 *  Read IR sensor 2
 	 */
     //% weight=90
-    //% blockId="cobit-base_readIRsensor" block="IR센서 2 읽기"
+    //% blockId="cobit-base_readIRsensor2" block="IR센서 2 읽기"
     export function readIRsensor2(): number {
         let value = 0
         value = pins.digitalReadPin(DigitalPin.P4)
