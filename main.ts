@@ -176,7 +176,7 @@ namespace cobit_car {
 	 */
     //% weight=90
     //% degree.min=0 degree.max=180
-    //% blockId="cobit-base_rotateServo1" block="서보모터 1 %degree|도 회전하기"
+    //% blockId="cobit-base_rotateServo_first" block="첫번쩨 서보모터  %degree|도 회전하기"
     export function rotateServo1(degree: number): void {
         if (degree > 180) {
             degree = 180
@@ -193,7 +193,7 @@ namespace cobit_car {
 	 */
     //% weight=90
     //% degree.min=0 degree.max=180
-    //% blockId="cobit-base_rotateServo2" block="서보모터 2 %degree|도 회전하기"
+    //% blockId="cobit-base_rotateServo_second" block="두번째 서보모터 %degree|도 회전하기"
     export function rotateServo2(degree: number): void {
         if (degree > 180) {
             degree = 180
@@ -211,7 +211,7 @@ namespace cobit_car {
 	 */
     //% weight=90
     //% degree.min=0 degree.max=180
-    //% blockId="cobit-base_rotateServo3" block="서보모터 3 %degree|도 회전하기"
+    //% blockId="cobit-base_rotateServo_third" block="세번째 서보모터 %degree|도 회전하기"
     export function rotateServo3(degree: number): void {
         if (degree > 180) {
             degree = 180
