@@ -243,6 +243,6 @@ namespace cobit_car {
         let value = 0
         value = pins.digitalReadPin(DigitalPin.P4)
         return value
-    }
+    } 
 
 }
