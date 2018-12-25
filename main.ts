@@ -169,4 +169,34 @@ namespace cobit_car {
         value = pins.pulseIn(DigitalPin.P10, PulseValue.High)  /  58 
         return  value
     }   
+
+      /**
+	 * Moves the servo.
+     * @param degree servo rotation degree 
+	 */
+    //% weight=90
+    //% degree.min=0 degree.max=180
+    //% blockId="cobit-base_rotateServo" block="서보모터 %degree|도 회전하기"
+    export function rotateServo(degree: number): void {
+        if (degree > 180) {
+            degree = 180
+        }
+        if (degree < 0) {
+            degree = 0
+        }
+        pins.servoWritePin(AnalogPin.P15, degree)
+    }
+
+
+    /**
+	 *  Read IR sensor 
+	 */
+    //% weight=90
+    //% blockId="cobit-base_readIRsensor" block="IR센서 읽기"
+    export function readIRsensor(): number {
+        let value = 0
+        value = pins.digitalReadPin(DigitalPin.P8)
+        return value
+    }
+
 }
