@@ -227,7 +227,7 @@ namespace cobit_car {
 	 *  Read IR sensor 1
 	 */
     //% weight=90
-    //% blockId="cobit-base_readIRsensor" block="IR센서 읽기"
+    //% blockId="cobit-base_readIRsensor" block="IR센서 1 읽기"
     export function readIRsensor1(): number {
         let value = 0
         value = pins.digitalReadPin(DigitalPin.P8)
@@ -238,7 +238,7 @@ namespace cobit_car {
 	 *  Read IR sensor 2
 	 */
     //% weight=90
-    //% blockId="cobit-base_readIRsensor" block="IR센서 읽기"
+    //% blockId="cobit-base_readIRsensor" block="IR센서 2 읽기"
     export function readIRsensor2(): number {
         let value = 0
         value = pins.digitalReadPin(DigitalPin.P4)
