@@ -39,7 +39,7 @@ namespace cobit_car {
     export function goForward(speed: number): void {
         let pwr = 0
         if (speed > 100) {
-            speed = 100
+            speed = 100   
         }
         pwr = speed * 10
         if (pwr > 1024) {
