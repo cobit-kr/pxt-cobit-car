@@ -22,7 +22,7 @@ namespace cobit_car {
 	 * Stops the motor.
 	 */
     //% weight=90
-    //% blockId="cobit_stopMotor" block="자동차 멈추기"
+    //% blockId="cobit_stopMotor" block="멈추기"
     export function motorStop(): void {
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.analogWritePin(AnalogPin.P14, 0)
@@ -77,7 +77,7 @@ namespace cobit_car {
 	 */
     //% speed.min=0 speed.max=100
     //% weight=90
-    //% blockId="cobit_turnLeft" block="왼쪽으로" %speed|%속도로 회전하기"
+    //% blockId="cobit_turnLeft" block="왼쪽으로 %speed|% 속도로 회전하기"
     export function turnLeft(speed: number): void {
         let pwr = 0
         if (speed > 100) {
@@ -198,7 +198,7 @@ namespace cobit_car {
 	 *  Read IR sensor 2
 	 */
     //% weight=90
-    //% blockId="cobit-base_readIRsensor_second" block="두번째 센서 읽기"
+    //% blockId="cobit-base_readIRsensor_second" block="두번째 IR센서 읽기"
     export function readIRsensor2(): number {
         let value = 0
         value = pins.digitalReadPin(DigitalPin.P4)
