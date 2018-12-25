@@ -211,7 +211,7 @@ namespace cobit_car {
 	 */
     //% weight=90
     //% degree.min=0 degree.max=180
-    //% blockId="cobit-base_rotateServo" block="서보모터 2 %degree|도 회전하기"
+    //% blockId="cobit-base_rotateServo" block="서보모터 3 %degree|도 회전하기"
     export function rotateServo3(degree: number): void {
         if (degree > 180) {
             degree = 180
