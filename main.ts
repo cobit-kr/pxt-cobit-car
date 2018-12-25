@@ -17,52 +17,12 @@ enum MotorDirection {
  */
 //% color=#f44242 icon="\uf1b9" block="cobit-car"
 namespace cobit_car {
-    /**
-	 * Run left or right motor to CCW or CW with speed of percent. 
-     * @param motor left or right motor 
-     * @param direction CCW or CW 
-     * @param speed speed as percent
-	 */
-    //% blockId="cobit_runMotor" block="run %motor motor|motor %direction|at %speed|%"
-    //% speed.min=0 speed.max=100
-    //% weight=80
-    export function runMotor(motor: Motor, direction: MotorDirection, speed: number): void {
-        let pwr = 0
-        speed = Math.abs(speed)
-        if (speed > 100) {
-            speed = 100
-        }
-
-        pwr = speed * 10
-        if (pwr > 1024) {
-            pwr = 1024
-        }
-
-        if (motor == Motor.Left) {
-            if (direction == MotorDirection.CCW) {
-                pins.digitalWritePin(DigitalPin.P13, 1)
-                pins.analogWritePin(AnalogPin.P14, (1024 - pwr))
-            } else if (direction == MotorDirection.CW) {
-                pins.digitalWritePin(DigitalPin.P13, 0)
-                pins.analogWritePin(AnalogPin.P14, pwr)
-            }
-
-        } else if (motor == Motor.Right) {
-            if (direction == MotorDirection.CCW) {
-                pins.digitalWritePin(DigitalPin.P15, 1)
-                pins.analogWritePin(AnalogPin.P16, (1024 - pwr))
-            } else if (direction == MotorDirection.CW) {
-                pins.digitalWritePin(DigitalPin.P15, 1)
-                pins.analogWritePin(AnalogPin.P16, pwr)
-            }
-        }
-    }
 
 	/**
 	 * Stops the motor.
 	 */
     //% weight=90
-    //% blockId="cobit_stopMotor" block="motor stop"
+    //% blockId="cobit_stopMotor" block="자동차 멈추기"
     export function motorStop(): void {
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.analogWritePin(AnalogPin.P14, 0)
@@ -75,7 +35,7 @@ namespace cobit_car {
 	 */
     //% speed.min=0 speed.max=100
     //% weight=90
-    //% blockId="cobit_goForward" block="go forward at %speed|%"
+    //% blockId="cobit_goForward" block="앞으로 %speed|% 속도로 가기"
     export function goForward(speed: number): void {
         let pwr = 0
         if (speed > 100) {
@@ -96,7 +56,7 @@ namespace cobit_car {
 	 */
     //% speed.min=0 speed.max=100
     //% weight=90
-    //% blockId="cobit_goBackward" block="go backward at %speed|%"
+    //% blockId="cobit_goBackward" block="뒤로 %speed|% 속도로 가기"
     export function goBackward(speed: number): void {
         let pwr = 0
         if (speed > 100) {
@@ -117,7 +77,7 @@ namespace cobit_car {
 	 */
     //% speed.min=0 speed.max=100
     //% weight=90
-    //% blockId="cobit_turnLeft" block="turn left at %speed|%"
+    //% blockId="cobit_turnLeft" block="왼쪽으로" %speed|%속도로 회전하기"
     export function turnLeft(speed: number): void {
         let pwr = 0
         if (speed > 100) {
@@ -138,7 +98,7 @@ namespace cobit_car {
 	 */
     //% speed.min=0 speed.max=100
     //% weight=90
-    //% blockId="cobit_turnRight" block="turn right at %speed|%"
+    //% blockId="cobit_turnRight" block="오른쪽으로 %speed|% 속도로 회전하기"
     export function turnLight(speed: number): void {
         let pwr = 0
         if (speed > 100) {
@@ -227,7 +187,7 @@ namespace cobit_car {
 	 *  Read IR sensor 1
 	 */
     //% weight=90
-    //% blockId="cobit-base_readIRsensor1" block="IR센서 1 읽기"
+    //% blockId="cobit-base_readIRsensor_first" block="첫번째 IR센서 읽기"
     export function readIRsensor1(): number {
         let value = 0
         value = pins.digitalReadPin(DigitalPin.P8)
@@ -238,7 +198,7 @@ namespace cobit_car {
 	 *  Read IR sensor 2
 	 */
     //% weight=90
-    //% blockId="cobit-base_readIRsensor2" block="IR센서 2 읽기"
+    //% blockId="cobit-base_readIRsensor_second" block="두번째 센서 읽기"
     export function readIRsensor2(): number {
         let value = 0
         value = pins.digitalReadPin(DigitalPin.P4)
